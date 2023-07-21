@@ -27,8 +27,8 @@ var contp:Int=0
             else{
                 print("Es impar $a")
                 coni=coni+1
-            acumim=acumim+a
-            println()
+                acumim=acumim+a
+                println()
             }
 
         }
