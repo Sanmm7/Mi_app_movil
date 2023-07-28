@@ -2,10 +2,11 @@ class consesionarioArray {
 }
 fun main(){
     var i:Int=1
-    var cars = mutableListOf("mazda")
+    val cars = mutableListOf("")
 
     while (i==1) {
-        println("Digite 1 para registrar, 2.para mostar los autos,3.Buscar auto,4 para modificar,5 para eliminar el auto")
+
+        println("Digite 1 para registrar, 2.para mostar los autos,3.Buscar auto,4 para modificar,5 para eliminar el auto, 6.se elimina tdoa la lista")
         var a: Int = readLine()!!.toInt();
         if (a == 1) {
             println("Digite la marca del auto")
@@ -23,7 +24,7 @@ fun main(){
             print(cars)
         }
         if (a == 3) {
-            println("Digite el auto que desa buscar")
+            println("Digite el auto que desea buscar")
             var carrito = readLine()
             val found = cars.any { carrito == it }
             if (found == true) {
@@ -38,9 +39,9 @@ fun main(){
         }
         if (a == 4) {
             println("Digite la marca que desea modificar")
-            val marca = readLine()
+            var marca = readLine()
             val index = cars.indexOfFirst { it == marca }
-            if (index != 1) {
+            if (index == 1) {
                 print("Digita la nueva marca: ")
                 val nmarca = readLine()
                 cars[index] = nmarca.toString()
@@ -51,7 +52,7 @@ fun main(){
             println("Digite el auto que desea eliminar")
             val marca = readLine()
             val index = cars.indexOfFirst { it == marca }
-            if (index != 1) {
+            if (index == 1) {
                 cars.removeAt(index)
                 println("Se elimo exitosamente")
             }
